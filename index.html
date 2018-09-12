@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>pop dialog</title>
+    <script src="./js/jquery1.3.1.js"></script>
+    <script src="./js/popDialog/SMKPopDialog.js"></script>
+</head>
+<style>
+</style>
+<body>
+        
+    <button>显示</button>
+ 
+</body>
+</html>
+<style>
+
+    .pop-dialog-bottom-button {
+        height:44px;
+        width:80px;
+        background-color:orange;
+    }
+    .pop-dialog-bottom-button—left {
+        margin-right:40px;
+    }
+
+</style>
+<script>
+
+    var pop = SMKPopDialog.init({
+        bgImage: './images/share.png',
+        bgClick: function() {
+            console.log('bg click ...')
+        },
+        msg: {
+            text   : '标题标题标题标题标题标题',
+            offest : 60,
+            fontSize: 15,
+            color: 'red'
+        },
+        container: {
+            html: '<button class="pop-dialog-bottom-button pop-dialog-bottom-button—left">确定</button>' + 
+                  '<button class="pop-dialog-bottom-button pop-dialog-bottom-button—right">取消</button>'
+        },
+        close: {
+            offset: 'b-100,c',
+            image: './images/close.png',
+            width: 50,
+            callback: function() {
+                console.log('close ...')
+            }
+        }
+      
+    })
+
+    $('button').click(function() {
+        pop.show()
+    })
+
+    $('.pop-dialog-bottom-button—left').click(function() {
+        console.log('click left button')
+    })
+
+    $('.pop-dialog-bottom-button—right').click(function() {
+        console.log('click right button')
+    })
+
+</script>
