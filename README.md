@@ -8,6 +8,21 @@ a awesome coustom js pop dialog
 ### usage
 
 ```js
+    /**
+     * 初始化
+     * options.bgColor 背景色
+     * options.width   宽度
+     * options.height  高度
+     * options.bgImage 背景图片
+     * options.bgClick 背景点击
+     * options.msg.text 弹框文字
+     * options.msg.fontSize 弹框文字大小
+     * options.msg.color    弹框文字颜色
+     * options.close.width  关闭宽度
+     * options.close.height 关闭高度
+     * options.close.image  关闭图片
+     * options.close.offset 关闭位置 lt:左上 lb:左下 rt:右上 rb:右下 tc:上中 bc:底中  l+/-x,t+/-x偏移位置
+     */
     var pop = SMKPopDialog.init({
         bgImage: './images/share.png',
         bgClick: function() {
